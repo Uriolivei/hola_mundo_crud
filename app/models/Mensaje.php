@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__ . '/../Database.php';
-
 class Mensaje
 {
  public static function all(): array
@@ -21,7 +19,7 @@ class Mensaje
 
  public static function create(array $d): int{
   $pdo = Database::getConnection();
-  $st = $pdo->query("INSERT INTO mensaje(titulo, descripcion, imagen, fecha) VALUES (?, ?, ?, ?)");
+  $st = $pdo->query("INSERT INTO mensajes(titulo, descripcion, imagen, fecha) VALUES (?, ?, ?, ?)");
   $st->execute([$d['titulo'], $d['descripcion'], $d['imagen'], $d['fecha']]);
   return (int)$pdo->lastInsertId();
  }
@@ -36,7 +34,7 @@ class Mensaje
 
  public static function deleteById(int $id): bool{
   $pdo = Database::getConnection();
-  $st = $pdo->query("delete from mensaje whwre id_mensaje=?");
+  $st = $pdo->query("delete from mensaje where id_mensaje=?");
   $st->execute([$id]);
   return $st;
   }

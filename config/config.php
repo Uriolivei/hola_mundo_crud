@@ -5,7 +5,7 @@ define(constant_name: 'DB_NAME', value:'mensaje_DB');
 define(constant_name: 'DB_USER', value:'root');
 define(constant_name: 'DB_PASS', value:'');
 define(constant_name: 'DB_PORT', value:'3306');
-define(constant_name: 'BASE_URL', value:'/hola-mundo-crud/public/');
+define(constant_name: 'BASE_URL', value:'/hola_mundo_crud/public/');
 define(constant_name: 'UPLOAD_DIR', value:__DIR__.'/../public/imagenes');
 define(constant_name: 'MAX_IMAGE_BYTES', value:'2 * 1024 * 1024');
 define(constant_name: 'ALLOWED_EXT', value:['jpg','png','jpeg','gif','webp']);
